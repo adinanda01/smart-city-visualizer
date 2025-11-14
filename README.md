@@ -137,15 +137,4 @@ PORT=3001 npm run dev
 rm -rf node_modules package-lock.json
 npm install
 ```
-
-------------------------------------------------------------------------
-
-## 🤝 Contributing
-
-Pull requests and feature suggestions are welcome!
-
-------------------------------------------------------------------------
-
-## 📜 License
-
-MIT License --- free for personal and commercial use.
+Author : Aditya Nanda
