@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City Visualizer - Free AI Generation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-green-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">
+                🏙️ Smart City Visualizer
+            </h1>
+            <!-- <p class="text-gray-600">Free AI-Powered Urban Transformation</p> -->
+        </header>
+
+        <!-- Upload Form -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <form id="uploadForm" class="space-y-4">
+                <!-- File Upload -->
+                <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                    <input type="file" id="imageInput" accept="image/*" class="hidden">
+                    <label for="imageInput" class="cursor-pointer">
+                        <p class="text-lg">📁 Click to upload image</p>
+                        <p class="text-sm text-gray-500">or drag and drop</p>
+                    </label>
+                    <div id="imagePreview" class="mt-4 hidden">
+                        <img id="previewImg" src="" class="mx-auto max-h-48 rounded">
+                    </div>
+                </div>
+
+                <!-- Options -->
+                <div class="grid grid-cols-2 gap-4">
+                    <select id="generationModel" class="px-3 py-2 border rounded">
+                        <option value="fast">Fast Generation</option>
+                        <option value="quality">Quality Mode</option>
+                        <option value="artistic">Artistic Style</option>
+                        <option value="realistic">Photo Realistic</option>
+                    </select>
+                    
+                    <select id="developmentType" class="px-3 py-2 border rounded">
+                        <option value="mixed-use">Mixed-Use City</option>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="green-city">Green City</option>
+                    </select>
+                </div>
+
+                <input type="text" id="features" placeholder="Add features: solar panels, gardens, etc." 
+                       class="w-full px-3 py-2 border rounded">
+
+                <button type="submit" id="submitBtn" 
+                        class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700">
+                    Generate Smart City
+                </button>
+            </form>
+        </div>
+
+        <!-- Loading -->
+        <div id="loadingState" class="hidden bg-white rounded-lg shadow-lg p-8 text-center">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+            <p class="mt-4">Generating your smart city...</p>
+            <p class="text-sm text-gray-500 mt-2">First generation may take 20-30 seconds</p>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
